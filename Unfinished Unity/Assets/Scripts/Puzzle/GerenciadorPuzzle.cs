@@ -111,7 +111,8 @@ public class GerenciadorPuzzle : MonoBehaviour {
                     Invoke("ResetPuzzle", 0.7f);
                     Invoke("InvocaPersonagens", 4f);
                     Invoke("PuzzleFinalizado", 5f);
-					StartCoroutine ("Reset");
+                    lauren.transform.gameObject.tag = "pEscondido";
+                    StartCoroutine ("Reset");
                     cameraScript.ShakeCamera(3f, 0.1f);
                 }
                 else
@@ -175,10 +176,9 @@ public class GerenciadorPuzzle : MonoBehaviour {
 
     void InvocaPersonagens()
     {
-            FliperamaRed.FliperamaR_ligado = true;
-            FliperamaGreen.FliperamaG_ligado = true;
-            FliperamaBlue.FliperamaB_ligado = true;
-            
+        FliperamaRed.FliperamaR_ligado = true;
+        FliperamaGreen.FliperamaG_ligado = true;
+        FliperamaBlue.FliperamaB_ligado = true;
     }
 
     void PuzzleFinalizado()
@@ -230,6 +230,13 @@ public class GerenciadorPuzzle : MonoBehaviour {
             luzRed.gameObject.SetActive(false);
             luzGreen.gameObject.SetActive(false);
             luzYellow.gameObject.SetActive(true);
+        }
+        if (FliperamaRed.FliperamaR_ligado && FliperamaGreen.FliperamaG_ligado && FliperamaBlue.FliperamaB_ligado)
+        {
+            tvAnimation.SetInteger("Cores", 8);
+            luzRed.gameObject.SetActive(false);
+            luzGreen.gameObject.SetActive(false);
+            luzBlue.gameObject.SetActive(false);
         }
     }
 
