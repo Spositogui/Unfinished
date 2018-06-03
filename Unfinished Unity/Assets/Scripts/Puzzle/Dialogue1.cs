@@ -178,7 +178,7 @@ public class Dialogue1 : MonoBehaviour
     private void FimPuzzle()
     {
         painel.gameObject.SetActive(false);
-        Player.canMove = true;
+        //Player.canMove = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
