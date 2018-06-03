@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Esconder
+  - pEscondido
+  - backGround
+  - Mapa
+  - Block
+  - AudioChase
+  - START
+  - Dialogo
+  - TomNPC
+  - Filtro
+  - Preto
+  - Cenarios
+  - GameOver
+  - Enemy
+  - OptionsMenu
+  - VideoSettings
+  - GeneralSettings
+  - Door
+  - FlipRed
+  - FlipGreen
+  - FlipBlue
+  - SalaDeJogos
+  - TriggerPlayer
+  - CartuchoRed
+  - CartuchoGreen
+  - CartuchoBlue
+  - PretoLanterna
+  - DeathSound
+  - FlipR
+  - FlipG
+  - FlipB
+  - Tv
+  - Galo
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - backgorund
+  - Wall
+  - Player
+  - Mapa
+  - Block
+  - Sc1
+  - Sc2l
+  - Sc2r
+  - Sc3l
+  - Sc3t
+  - Sc3r
+  - Sc3_5
+  - Sc4l
+  - Sc4r
+  - Sc5l
+  - Sc5b
+  - Sc5r
+  - Sc6
+  - Sc7
+  - Sc4_5
+  - Sc4t
+  - TomNPC
+  - Enemy
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: backGround
+    uniqueID: 3666784709
+    locked: 0
+  - name: Player
+    uniqueID: 4180184661
+    locked: 0

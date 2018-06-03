@@ -1,0 +1,28 @@
+-----fala Pos 0: -----
+- O... Olá, não se assuste. Eu sou Tom o fantasma Camarada! Posso te ajudar a sair daqui.
+
+-----fala Pos 1: -----
+Você precisa encontrar fitas que estão espalhadas pelas mansão e usá-las naqueles fliperamas bem ali >>>
+
+-----fala Pos 2: -----
+As fitas são três e tem as respectivas cores : VERMELHO, VERDE e AZUL. Vai lá, eu sei que você consegue!
+
+-----fala Pos 3: -----
+Só tome cuidado com ELE ...
+
+-----fala Pos 4: -----
+Muito bem, você conseguiu encontra-lás! Agora você precisa acertar
+a combinação.
+
+-----fala Pos 5: -----
+Você precisa colocar as fitas nos Fliperamas de uma forma que a cor
+que vai aparecer na Tv, ali em cima, fique na sequencia do Padrão CMY. Boa Sorte!
+
+-----fala Pos 6: -----
+Muito bem você já acertou uma cobinação! Faltam só mais duas.
+
+-----fala Pos 7: -----
+Acertou outra, agora só falta uma combinação. Se você conseguir eu e meus amigos poderemos te ajudar.
+
+-----fala Pos 8: -----
+Muito bem, você é incrivel. Ai vem eles !
