@@ -13,6 +13,8 @@ public class Camera : MonoBehaviour
     private string visaoCamera;
     private float balancarDistancia;
     private float balancarTime;
+    private AudioSource[] audioCamera;
+    private AudioSource terremotoSound;
 
 	public float smoothTimeX;
 	public float smoothTimeY;
@@ -26,6 +28,8 @@ public class Camera : MonoBehaviour
         balancarDistancia = 0;
         //anim = GetComponent<Animator>();
 		player = GameObject.Find ("Player").GetComponent<Transform> ();
+        audioCamera= GetComponents<AudioSource>(); ;
+        terremotoSound = audioCamera[1];
     }
     // Update is called once per frame
     void FixedUpdate () 
@@ -47,8 +51,11 @@ public class Camera : MonoBehaviour
 
             balancarTime -= Time.deltaTime;
         }
-        else if(balancarTime <0)
+        else if (balancarTime < 0)
+        {
+            terremotoSound.Stop();
             visaoCamera = "player";
+        }
 
     }
 
@@ -57,6 +64,8 @@ public class Camera : MonoBehaviour
         balancarTime = time;
         balancarDistancia = disBalanca;
         visaoCamera = "CameraShake";
+        terremotoSound.time = 0.8f;
+        terremotoSound.Play();
     }
 
 

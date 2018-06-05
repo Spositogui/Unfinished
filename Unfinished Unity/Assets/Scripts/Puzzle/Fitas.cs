@@ -5,12 +5,14 @@ using UnityEngine;
 public class Fitas : MonoBehaviour {
 
     private bool colisaoPlayer;
+    private AudioSource audioFita;
  
 	
 	void Start ()
     {
         colisaoPlayer = false;
-	}
+        audioFita = GameObject.FindGameObjectWithTag("Fitas").GetComponent<AudioSource>();
+    }
 	
 	void Update ()
     {
@@ -19,6 +21,8 @@ public class Fitas : MonoBehaviour {
             this.gameObject.SetActive(false);
             GerenciadorPuzzle.numeroDeFitas++;
             print("Numero de Fitas: " + GerenciadorPuzzle.numeroDeFitas);
+            audioFita.time = 0.5f;
+            audioFita.Play();
         }
 	}
 
