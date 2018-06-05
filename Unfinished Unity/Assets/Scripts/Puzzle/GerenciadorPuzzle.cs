@@ -83,7 +83,7 @@ public class GerenciadorPuzzle : MonoBehaviour {
                     Dialogue1.estado = coresFeitas = "CianoFeito";
                     Invoke("ResetPuzzle", 0.7f);
 					StartCoroutine ("Reset");
-                    cameraScript.ShakeCamera(0.8f, 0.2f);
+                    cameraScript.ShakeCamera(0.8f, 0.05f);
                 }
                 else
                 {
@@ -97,7 +97,7 @@ public class GerenciadorPuzzle : MonoBehaviour {
                     Dialogue1.estado = coresFeitas = "MagentaFeita";
                     Invoke("ResetPuzzle", 0.7f);
 					StartCoroutine ("Reset");
-                    cameraScript.ShakeCamera(0.8f, 0.2f);
+                    cameraScript.ShakeCamera(0.8f, 0.05f);
                 }
                 else
                 {
@@ -113,7 +113,7 @@ public class GerenciadorPuzzle : MonoBehaviour {
                     Invoke("PuzzleFinalizado", 5f);
                     lauren.transform.gameObject.tag = "pEscondido";
                     StartCoroutine ("Reset");
-                    cameraScript.ShakeCamera(3f, 0.1f);
+                    cameraScript.ShakeCamera(3f, 0.06f);
                 }
                 else
                 {
