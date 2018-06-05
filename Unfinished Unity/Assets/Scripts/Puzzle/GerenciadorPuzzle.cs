@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GerenciadorPuzzle : MonoBehaviour {
 
@@ -111,9 +112,11 @@ public class GerenciadorPuzzle : MonoBehaviour {
                     Invoke("ResetPuzzle", 0.7f);
                     Invoke("InvocaPersonagens", 4f);
                     Invoke("PuzzleFinalizado", 5f);
+                    Invoke("EndDemo", 8f);
                     lauren.transform.gameObject.tag = "pEscondido";
                     StartCoroutine ("Reset");
                     cameraScript.ShakeCamera(3f, 0.06f);
+
                 }
                 else
                 {
@@ -245,4 +248,9 @@ public class GerenciadorPuzzle : MonoBehaviour {
 		yield return new WaitForSeconds (4f);
 		lauren.transform.gameObject.tag = "Player";
 	}
+
+    void EndDemo()
+    {
+        SceneManager.LoadScene("DemoEnd");
+    }
 }
