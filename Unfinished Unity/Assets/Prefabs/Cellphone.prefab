@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95897290921460646}
   - component: {fileID: 114385264862258618}
   - component: {fileID: 82851453932959660}
+  - component: {fileID: 222100707628453858}
   m_Layer: 5
   m_Name: Cellphone
   m_TagString: Untagged
@@ -192,7 +193,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: b51b442a62847d44ab78cc91a768ebb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -203,6 +204,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!222 &222100707628453858
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122554676329700}
 --- !u!224 &224202379375783638
 RectTransform:
   m_ObjectHideFlags: 1
@@ -211,13 +218,13 @@ RectTransform:
   m_GameObject: {fileID: 1122554676329700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 233.74695, y: 233.74695, z: 233.74695}
+  m_LocalScale: {x: 233.74693, y: 233.74693, z: 233.74693}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176, y: 220}
+  m_AnchoredPosition: {x: -784, y: -320}
   m_SizeDelta: {x: 1.3714286, y: 1.8285714}
   m_Pivot: {x: 0.5, y: 0.5}

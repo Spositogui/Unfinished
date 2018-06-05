@@ -16,7 +16,7 @@ public class OptionsMenu : MonoBehaviour
     private GameObject videoSettings;
     [SerializeField]
     private GameObject audioSettings;
-    private bool aux = false;
+    public static bool aux = false;
 
     public AudioMixerSnapshot paused;// recebe o snapshot
     public AudioMixerSnapshot unpaused;//recebe o snapshot
