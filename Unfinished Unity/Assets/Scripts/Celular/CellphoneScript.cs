@@ -6,33 +6,30 @@ using UnityEngine.SceneManagement;
 
 public class CellphoneScript : MonoBehaviour {
 
-	private Transform posPlayer;
-	public GameObject mainCan;
+    public GameObject jogador;
+    public GameObject mainCan;
 	public GameObject mapCan;
-    private float bateria;
+
+    public static int i;
+    public static bool celularLigado;
 
     private Animator anim;
+    private Transform posPlayer;
+    private AudioSource[] sounds;
+    private AudioSource scrollSound;
 
-    public static string estadoCelular;
-    private int i;
-	private bool right;
+    private bool right;
 	private bool left;
 	private bool up;
 	private bool down;
-	private AudioSource [] sounds;
-	private AudioSource scrollSound;
-
-	public GameObject jogador;
-
+	
 	void Awake()
 	{
 		i = 1;
-	}
+    }
 
 	void Start () 
 	{
-        estadoCelular = "desligado";
-        bateria = 100f;
 		anim = GetComponent<Animator> ();
 		posPlayer = GameObject.Find ("Player").GetComponent<Transform> ();
 		sounds = GetComponents<AudioSource> ();
@@ -48,11 +45,7 @@ public class CellphoneScript : MonoBehaviour {
         //			mapCan.gameObject.SetActive(false);
         //		}
 
-        print(bateria);
-
-        ChecaEstadosCelular();
-			
-		right = Input.GetKeyDown (KeyCode.RightArrow);
+        right = Input.GetKeyDown (KeyCode.RightArrow);
 		left = Input.GetKeyDown (KeyCode.LeftArrow);
 		up = Input.GetKeyDown(KeyCode.UpArrow);
 		down = Input.GetKeyDown(KeyCode.DownArrow);
@@ -143,38 +136,5 @@ public class CellphoneScript : MonoBehaviour {
 			teste.EstadoLuz ();
 		}
 	}
-    public void ChecaEstadosCelular()
-    {
-        if (estadoCelular == "desligado")
-        {
-
-        }
-        else if (estadoCelular == "ligado")
-        {
-            StartCoroutine(CelularLigado());
-        }
-        else if (estadoCelular == "carregando")
-        {
-
-        }
-        else if (estadoCelular == "lanterna")
-        {
-            StartCoroutine(LanternaLigada());
-        }
-        else if (estadoCelular == "outrosApps")
-        {
-
-        }
-    }
-
-    IEnumerator CelularLigado()
-    {
-        yield return new WaitForSeconds(10);
-        bateria -= 0.16f;
-    }
-    IEnumerator LanternaLigada()
-    {
-        yield return new WaitForSeconds(10);
-        bateria -= 0.8f;
-    }
+    
 }

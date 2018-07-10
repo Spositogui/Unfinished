@@ -8,7 +8,6 @@ public class LuzCelular : MonoBehaviour
 
 	public GameObject Celular;
 
-	private bool ligado;
 	private Light luzCelular;
 	public bool luzCelularEstado;
 	private Player lauren;

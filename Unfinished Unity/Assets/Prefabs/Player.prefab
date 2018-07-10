@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 50034950035997986}
   - component: {fileID: 70005880163346480}
   - component: {fileID: 95902207232670900}
+  - component: {fileID: 114682726045238922}
   - component: {fileID: 114173298349286796}
   - component: {fileID: 114142529286056944}
   - component: {fileID: 82318199972589716}
@@ -207,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660812427141384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.93, y: -1.83, z: 0}
+  m_LocalPosition: {x: 0.7, y: 24.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4239473376504802}
@@ -742,6 +743,17 @@ MonoBehaviour:
   luzCelularEstado: 0
   can: 0
   cellphone: {fileID: 0}
+--- !u!114 &114682726045238922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660812427141384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de5726dac336ff43b489e6f98490da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114697745053095804
 MonoBehaviour:
   m_ObjectHideFlags: 1

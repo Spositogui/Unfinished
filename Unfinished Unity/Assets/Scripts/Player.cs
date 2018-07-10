@@ -323,10 +323,11 @@ public class Player : MonoBehaviour
         //Instancia o Celular
         pegarCelular = Input.GetKeyDown(KeyCode.Tab);
 
+        
+
         //Só pode pegar o celular se a lanterna estiver desligada e não estiver escondida
         if (pegarCelular && !estadoDaLuz && can && tag == "Player")
 		{
-            CellphoneScript.estadoCelular = "ligado";
 			can = false;
 			StartCoroutine ("Time");
 			CriaPhone ();
