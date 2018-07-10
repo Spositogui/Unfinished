@@ -9,10 +9,12 @@ public class CellphoneScript : MonoBehaviour {
 	private Transform posPlayer;
 	public GameObject mainCan;
 	public GameObject mapCan;
+    private float bateria;
 
-	private Animator anim;
+    private Animator anim;
 
-	private int i;
+    public static string estadoCelular;
+    private int i;
 	private bool right;
 	private bool left;
 	private bool up;
@@ -29,6 +31,8 @@ public class CellphoneScript : MonoBehaviour {
 
 	void Start () 
 	{
+        estadoCelular = "desligado";
+        bateria = 100f;
 		anim = GetComponent<Animator> ();
 		posPlayer = GameObject.Find ("Player").GetComponent<Transform> ();
 		sounds = GetComponents<AudioSource> ();
@@ -39,10 +43,14 @@ public class CellphoneScript : MonoBehaviour {
 
 	void Update () 
 	{
-//		if (mapCan.activeSelf == true && Input.GetKeyDown (KeyCode.Escape)) {
-//			mainCan.gameObject.SetActive(true);
-//			mapCan.gameObject.SetActive(false);
-//		}
+        //		if (mapCan.activeSelf == true && Input.GetKeyDown (KeyCode.Escape)) {
+        //			mainCan.gameObject.SetActive(true);
+        //			mapCan.gameObject.SetActive(false);
+        //		}
+
+        print(bateria);
+
+        ChecaEstadosCelular();
 			
 		right = Input.GetKeyDown (KeyCode.RightArrow);
 		left = Input.GetKeyDown (KeyCode.LeftArrow);
@@ -135,4 +143,38 @@ public class CellphoneScript : MonoBehaviour {
 			teste.EstadoLuz ();
 		}
 	}
+    public void ChecaEstadosCelular()
+    {
+        if (estadoCelular == "desligado")
+        {
+
+        }
+        else if (estadoCelular == "ligado")
+        {
+            StartCoroutine(CelularLigado());
+        }
+        else if (estadoCelular == "carregando")
+        {
+
+        }
+        else if (estadoCelular == "lanterna")
+        {
+            StartCoroutine(LanternaLigada());
+        }
+        else if (estadoCelular == "outrosApps")
+        {
+
+        }
+    }
+
+    IEnumerator CelularLigado()
+    {
+        yield return new WaitForSeconds(10);
+        bateria -= 0.16f;
+    }
+    IEnumerator LanternaLigada()
+    {
+        yield return new WaitForSeconds(10);
+        bateria -= 0.8f;
+    }
 }

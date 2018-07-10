@@ -11,16 +11,19 @@ public class Phone : MonoBehaviour
 
 	private Animator anim;
 
+    public float bateria;
 	private int i;
 	private bool right;
 	private bool left;
 	private bool up;
 	private bool down;
 
+    
 	public GameObject jogador;
 
 	void Start () 
 	{
+        bateria = 100f;
 		i = 1;
 		anim = GetComponent<Animator> ();
 		posPlayer = GameObject.Find ("Player").GetComponent<Transform> ();
@@ -30,6 +33,7 @@ public class Phone : MonoBehaviour
 
 	void Update () 
 	{
+        print(bateria);
 		right = Input.GetKeyDown (KeyCode.RightArrow);
 		left = Input.GetKeyDown (KeyCode.LeftArrow);
 		up = Input.GetKeyDown(KeyCode.UpArrow);
@@ -129,5 +133,4 @@ public class Phone : MonoBehaviour
 			teste.EstadoLuz ();
 		}
 	}
-
 }

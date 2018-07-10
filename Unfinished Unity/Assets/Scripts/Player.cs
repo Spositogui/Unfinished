@@ -116,7 +116,6 @@ public class Player : MonoBehaviour
 		canMove = true;
 		cap = GetComponent<CapsuleCollider2D> ();
         GameObject.FindGameObjectWithTag("Filtro").GetComponent<SpriteRenderer>().enabled = true;
-
         //Referente ao Puzzle ------------------
         /*tv = GameObject.FindGameObjectWithTag("Tv").GetComponent<SpriteRenderer>();
         cartuchoRed = GameObject.FindGameObjectWithTag("CartuchoRed");
@@ -154,7 +153,7 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
-		posx = this.transform.position.x;
+        posx = this.transform.position.x;
 		posy = this.transform.position.y;
 		estadoDaLuz = luzCel.GetComponent<LuzCelular> ().luzCelularEstado;
         //PuzzleRGB();
@@ -323,9 +322,11 @@ public class Player : MonoBehaviour
 
         //Instancia o Celular
         pegarCelular = Input.GetKeyDown(KeyCode.Tab);
-		//Só pode pegar o celular se a lanterna estiver desligada e não estiver escondida
-		if (pegarCelular && !estadoDaLuz && can && tag == "Player")
+
+        //Só pode pegar o celular se a lanterna estiver desligada e não estiver escondida
+        if (pegarCelular && !estadoDaLuz && can && tag == "Player")
 		{
+            CellphoneScript.estadoCelular = "ligado";
 			can = false;
 			StartCoroutine ("Time");
 			CriaPhone ();
