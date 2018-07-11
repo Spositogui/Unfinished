@@ -17,11 +17,13 @@ public class CellphoneScript : MonoBehaviour {
     private Transform posPlayer;
     private AudioSource[] sounds;
     private AudioSource scrollSound;
+    private AudioSource music;
 
     private bool right;
 	private bool left;
 	private bool up;
 	private bool down;
+    private bool aux;
 	
 	void Awake()
 	{
@@ -34,9 +36,18 @@ public class CellphoneScript : MonoBehaviour {
 		posPlayer = GameObject.Find ("Player").GetComponent<Transform> ();
 		sounds = GetComponents<AudioSource> ();
 		scrollSound = sounds [0];
-
+        music = sounds[1];
 	}
 
+    void OnEnable()
+    {
+        aux = false;
+    }
+
+    void OnDisable()
+    {
+        aux = false;
+    }
 
 	void Update () 
 	{
@@ -135,6 +146,24 @@ public class CellphoneScript : MonoBehaviour {
 			i = 1;
 			teste.EstadoLuz ();
 		}
-	}
+        //música
+        if(i == 3)
+        {
+            if(aux == false)
+            {
+                music.Play();
+                aux = true;
+                EstadosCelular.musica = true;
+            }
+            else
+            {
+                music.Stop();
+                aux = false;
+                EstadosCelular.musica = false;
+            }
+        }
+
+        
+    }
     
 }
