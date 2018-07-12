@@ -153,13 +153,13 @@ public class CellphoneScript : MonoBehaviour {
             {
                 music.Play();
                 aux = true;
-                EstadosCelular.musica = true;
+                EstadosCelular.estadoCelular = "musica";
             }
             else
             {
                 music.Stop();
                 aux = false;
-                EstadosCelular.musica = false;
+                EstadosCelular.estadoCelular = "ligado";
             }
         }
 

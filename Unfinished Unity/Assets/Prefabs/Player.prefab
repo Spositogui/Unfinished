@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Check: {fileID: 4751889455600068}
-  phonePrefab: {fileID: 1797443711134492, guid: 8364366c466dc034ca862a82240bdb60,
+  phonePrefab: {fileID: 1122554676329700, guid: 9b517077e1be2604ca9642a8fd978599,
     type: 2}
   luzCel: {fileID: 1894357850431164}
   speed: 3

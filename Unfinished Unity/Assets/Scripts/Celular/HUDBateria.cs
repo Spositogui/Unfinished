@@ -97,6 +97,7 @@ public class HUDBateria : MonoBehaviour {
         }
     }
 
+    //ATUALIZA O FLOAT DA BATERIA
     IEnumerator CelularLigado()
     {
         yield return new WaitForSeconds(1);
@@ -107,7 +108,14 @@ public class HUDBateria : MonoBehaviour {
         yield return new WaitForSeconds(1);
         bateria -= 0.008f;
     }
+    IEnumerator MusicaLigada()
 
+    {
+        yield return new WaitForSeconds(1);
+        bateria -= 0.0048f;
+    }
+
+    //ATUALIZA O SPRITE DA BATERIA
     IEnumerator CelularLigadoBat()
     {
         bateriaSprite.fillAmount = bateriaAtual;
@@ -124,6 +132,15 @@ public class HUDBateria : MonoBehaviour {
         {
             yield return bateriaSprite.fillAmount -= 0.00008f;
         } while (estadoCelular == "lanterna");
+        bateriaAtual = bateriaSprite.fillAmount;
+    }
+    IEnumerator MusicaLigadaBat()
+    {
+        bateriaSprite.fillAmount = bateriaAtual;
+        do
+        {
+            yield return bateriaSprite.fillAmount -= 0.000048f;
+        } while (estadoCelular == "musica");
         bateriaAtual = bateriaSprite.fillAmount;
     }
 

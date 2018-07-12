@@ -32,7 +32,8 @@ public class EstadosCelular : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
         print(bateria);
         print(estadoCelular);
@@ -53,7 +54,6 @@ public class EstadosCelular : MonoBehaviour {
         {
             estadoCelular = "lanterna";
         }
-<<<<<<< HEAD
 
         if (estadoCelular == "ligado")
         {
@@ -67,19 +67,12 @@ public class EstadosCelular : MonoBehaviour {
         {
             StartCoroutine(LanternaLigadaBat());
         }
-        else if (estadoCelular == "outrosApps")
+        else if (estadoCelular == "musica")
         {
-
-=======
-        if (musica)
-        {
-            estadoCelular = "musica";
->>>>>>> 27f5ea42b053448c15070e4c3a1bbbfbbd39f2bb
+            StartCoroutine(MusicaLigadaBat());
         }
-
         ChecaEstadosCelular();
-	}
-
+    }
     public void ChecaEstadosCelular()
     {
         if (estadoCelular == "desligado")
@@ -100,11 +93,7 @@ public class EstadosCelular : MonoBehaviour {
         }
         else if (estadoCelular == "musica")
         {
-
-        }
-        else if (estadoCelular == "outrosApps")
-        {
-
+            StartCoroutine(MusicaLigada());
         }
     }
 
@@ -117,6 +106,13 @@ public class EstadosCelular : MonoBehaviour {
     {
         yield return new WaitForSeconds(1);
         bateria -= 0.008f;
+    }
+
+    IEnumerator MusicaLigada()
+
+    {
+        yield return new WaitForSeconds(1);
+        bateria -= 0.0048f;
     }
 
     IEnumerator CelularLigadoBat()
@@ -135,6 +131,16 @@ public class EstadosCelular : MonoBehaviour {
         {
             yield return bateriaSprite.fillAmount -= 0.00008f;
         } while (estadoCelular == "lanterna");
+        bateriaAtual = bateriaSprite.fillAmount;
+    }
+
+    IEnumerator MusicaLigadaBat()
+    {
+        bateriaSprite.fillAmount = bateriaAtual;
+        do
+        {
+            yield return bateriaSprite.fillAmount -= 0.000048f;
+        } while (estadoCelular == "musica");
         bateriaAtual = bateriaSprite.fillAmount;
     }
 
