@@ -132,5 +132,6 @@ public class Phone : MonoBehaviour
 			LuzCelular teste = GameObject.Find ("luzCel").GetComponent<LuzCelular> ();
 			teste.EstadoLuz ();
 		}
+
 	}
 }

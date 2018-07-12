@@ -14,6 +14,7 @@ public class EstadosCelular : MonoBehaviour {
     public static string estadoCelular;
     public static float bateria;
     public static bool celularLigado;
+    public static bool musica;
 
     private bool estadoDaLuz;
 
@@ -21,6 +22,7 @@ public class EstadosCelular : MonoBehaviour {
     {
         estadoCelular = "desligado";
         bateria = 100f;
+        musica = false;
     }
 
     private void Start()
@@ -51,6 +53,7 @@ public class EstadosCelular : MonoBehaviour {
         {
             estadoCelular = "lanterna";
         }
+<<<<<<< HEAD
 
         if (estadoCelular == "ligado")
         {
@@ -67,6 +70,11 @@ public class EstadosCelular : MonoBehaviour {
         else if (estadoCelular == "outrosApps")
         {
 
+=======
+        if (musica)
+        {
+            estadoCelular = "musica";
+>>>>>>> 27f5ea42b053448c15070e4c3a1bbbfbbd39f2bb
         }
 
         ChecaEstadosCelular();
@@ -89,6 +97,10 @@ public class EstadosCelular : MonoBehaviour {
         else if (CellphoneScript.celularLigado == false && estadoCelular == "lanterna")
         {
             StartCoroutine(LanternaLigada());
+        }
+        else if (estadoCelular == "musica")
+        {
+
         }
         else if (estadoCelular == "outrosApps")
         {
