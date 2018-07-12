@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: ed1f80f8b9ad9d84588b1ea734627162
+guid: 02188253857bdb9428c9ddf850f9518a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 32
+  fontSize: 64
   forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Pixellari
+  fontName: Operational Amplifier
   fontNames:
-  - Pixellari
+  - Operational Amplifier
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 0
+  fontRenderingMode: 3
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1

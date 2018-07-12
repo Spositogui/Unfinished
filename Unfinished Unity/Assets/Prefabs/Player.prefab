@@ -754,6 +754,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de5726dac336ff43b489e6f98490da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bateriaSprite: {fileID: 0}
+  celular: {fileID: 0}
+  luzCel: {fileID: 1894357850431164}
 --- !u!114 &114697745053095804
 MonoBehaviour:
   m_ObjectHideFlags: 1

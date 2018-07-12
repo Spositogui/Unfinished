@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EstadosCelular : MonoBehaviour {
+public class HUDBateria : MonoBehaviour {
 
     public Image bateriaSprite;
     private float bateriaAtual;
@@ -30,7 +30,8 @@ public class EstadosCelular : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
         print(bateria);
         print(estadoCelular);
@@ -60,7 +61,7 @@ public class EstadosCelular : MonoBehaviour {
         {
 
         }
-        else if (CellphoneScript.celularLigado == false && estadoCelular == "lanterna")
+        else if (estadoCelular == "lanterna")
         {
             StartCoroutine(LanternaLigadaBat());
         }
@@ -70,7 +71,7 @@ public class EstadosCelular : MonoBehaviour {
         }
 
         ChecaEstadosCelular();
-	}
+    }
 
     public void ChecaEstadosCelular()
     {
@@ -86,7 +87,7 @@ public class EstadosCelular : MonoBehaviour {
         {
 
         }
-        else if (CellphoneScript.celularLigado == false && estadoCelular == "lanterna")
+        else if (estadoCelular == "lanterna")
         {
             StartCoroutine(LanternaLigada());
         }
