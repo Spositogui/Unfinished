@@ -9,7 +9,6 @@ public class CellphoneScript : MonoBehaviour {
     public GameObject jogador;
     public GameObject mainCan;
 	public GameObject mapCan;
-    public GameObject notasMusicais;
 
     public static int i;
     public static bool celularLigado;
@@ -33,7 +32,6 @@ public class CellphoneScript : MonoBehaviour {
 
 	void Start () 
 	{
-        notasMusicais.SetActive(false);
 		anim = GetComponent<Animator> ();
 		posPlayer = GameObject.Find ("Player").GetComponent<Transform> ();
 		sounds = GetComponents<AudioSource> ();
@@ -152,16 +150,14 @@ public class CellphoneScript : MonoBehaviour {
         if(i == 3)
         {
             if(aux == false)
-            {                
+            {
                 music.Play();
-                notasMusicais.SetActive(true);
                 aux = true;
                 EstadosCelular.estadoCelular = "musica";
             }
             else
             {
                 music.Stop();
-                notasMusicais.SetActive(false);
                 aux = false;
                 EstadosCelular.estadoCelular = "ligado";
             }
