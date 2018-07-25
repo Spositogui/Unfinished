@@ -17,10 +17,4 @@ public class BateriaCelular : MonoBehaviour {
         bateriaSprite = GetComponent<Image>();
         bateria = bateriaAtual;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-    }
-
 }

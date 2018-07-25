@@ -12,8 +12,11 @@ public class Player : MonoBehaviour
 	public float speed;
 	public float auxSpeed;
 	public bool destroyPhone;
+
 	public static float move;
 	public static bool seEscondeu;
+    public static string estadoMental;
+    public static float numEstadoMental;
 
 	private Transform phoneInstatiate;
 	private SpriteRenderer sprite;
@@ -100,7 +103,13 @@ public class Player : MonoBehaviour
 	public bool can;
 	public GameObject cellphone;
 
-	void Start () 
+    private void Awake()
+    {
+        estadoMental = "fine";
+        numEstadoMental = 100;
+    }
+
+    void Start () 
 	{
 		clonePhone = true;
         cellphone.SetActive (false);
@@ -376,9 +385,8 @@ public class Player : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		
-		//comandos de movimentação
-		if (canMove) 
+        //comandos de movimentação
+        if (canMove) 
 		{
 			move = Input.GetAxis ("Horizontal");		
 			rb.velocity = new Vector2 (move * speed, rb.velocity.y);
@@ -699,6 +707,5 @@ public class Player : MonoBehaviour
 	{
 		yield return new WaitForSeconds (1.5f);
 		can = true;
-	}
-		
+	}	
 }

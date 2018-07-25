@@ -34,9 +34,9 @@ public class EstadosCelular : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
-        print(bateria);
-        print(estadoCelular);
+        //PARA TESTAR OS NUMEROS DESCOMENTAR ABAIXO
+        //print(bateria);
+        //print(estadoCelular);
 
         estadoDaLuz = luzCel.GetComponent<LuzCelular>().luzCelularEstado;
 

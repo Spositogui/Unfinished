@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour {
 
 	public bool facingRight = true;
 	public bool tochedwall = false;
-	public bool detected = false;
+	public static bool detected = false;
 	public bool behind = false;
 	private bool c5;
 	private bool c4;
