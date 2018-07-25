@@ -91,10 +91,11 @@ AudioSource:
   m_GameObject: {fileID: 1122554676329700}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243890583840021484, guid: f96a7b3cfcbd1c84a9077ccb2a33cb91,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: daa426557bbdd1a449784f68a87a5f5a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -186,7 +187,7 @@ AudioSource:
   m_GameObject: {fileID: 1122554676329700}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243558884602666816, guid: f96a7b3cfcbd1c84a9077ccb2a33cb91,
+  OutputAudioMixerGroup: {fileID: 243890583840021484, guid: f96a7b3cfcbd1c84a9077ccb2a33cb91,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 7f851ac9a1392b04588ab0616247535d, type: 3}
   m_PlayOnAwake: 1
@@ -360,6 +361,7 @@ MonoBehaviour:
   jogador: {fileID: 0}
   mainCan: {fileID: 0}
   mapCan: {fileID: 0}
+  notasMusicais: {fileID: 0}
 --- !u!114 &114497041067750652
 MonoBehaviour:
   m_ObjectHideFlags: 1
