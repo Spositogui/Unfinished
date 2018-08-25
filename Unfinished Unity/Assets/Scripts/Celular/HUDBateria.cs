@@ -33,8 +33,8 @@ public class HUDBateria : MonoBehaviour {
     void Update()
     {
 
-        print(bateria);
-        print(estadoCelular);
+        //print(bateria);
+        //print(estadoCelular);
 
         estadoDaLuz = luzCel.GetComponent<LuzCelular>().luzCelularEstado;
 

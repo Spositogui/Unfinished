@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 	public GameObject phonePrefab;
 	public GameObject luzCel;
 	public float speed;
-	public float auxSpeed;
+	public static float auxSpeed;
 	public bool destroyPhone;
 
 	public static float move;

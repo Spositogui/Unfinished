@@ -13,6 +13,7 @@ public class CellphoneScript : MonoBehaviour {
 
     public static int i;
     public static bool celularLigado;
+    public static bool ligouMusica = false;
 
     private Animator anim;
     private Transform posPlayer;
@@ -156,6 +157,7 @@ public class CellphoneScript : MonoBehaviour {
                 music.Play();
                 notasMusicais.SetActive(true);
                 aux = true;
+                ligouMusica = true;
                 EstadosCelular.estadoCelular = "musica";
             }
             else
@@ -163,6 +165,7 @@ public class CellphoneScript : MonoBehaviour {
                 music.Stop();
                 notasMusicais.SetActive(false);
                 aux = false;
+                ligouMusica = false;
                 EstadosCelular.estadoCelular = "ligado";
             }
         }

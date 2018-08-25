@@ -36,11 +36,11 @@ public class EstadosCelular : MonoBehaviour {
     {
         //PARA TESTAR OS NUMEROS DESCOMENTAR ABAIXO
         //print(bateria);
-        //print(estadoCelular);
+        print(estadoCelular);
 
         estadoDaLuz = luzCel.GetComponent<LuzCelular>().luzCelularEstado;
 
-        if (celular.activeSelf)
+        if (celular.activeSelf && CellphoneScript.ligouMusica == false)
         {
             estadoCelular = "ligado";
             CellphoneScript.celularLigado = true;
@@ -55,7 +55,7 @@ public class EstadosCelular : MonoBehaviour {
             estadoCelular = "lanterna";
         }
 
-        if (estadoCelular == "ligado")
+        if (estadoCelular == "ligado" && CellphoneScript.ligouMusica == false)
         {
             StartCoroutine(CelularLigadoBat());
         }
@@ -67,7 +67,7 @@ public class EstadosCelular : MonoBehaviour {
         {
             StartCoroutine(LanternaLigadaBat());
         }
-        else if (estadoCelular == "musica")
+        else if (estadoCelular == "musica" && CellphoneScript.ligouMusica == true)
         {
             StartCoroutine(MusicaLigadaBat());
         }
@@ -79,7 +79,7 @@ public class EstadosCelular : MonoBehaviour {
         {
             bateria -= 0f;
         }
-        else if (estadoCelular == "ligado")
+        else if (estadoCelular == "ligado" && CellphoneScript.ligouMusica == false)
         {
             StartCoroutine(CelularLigado());
         }
@@ -91,7 +91,7 @@ public class EstadosCelular : MonoBehaviour {
         {
             StartCoroutine(LanternaLigada());
         }
-        else if (estadoCelular == "musica")
+        else if (estadoCelular == "musica" && CellphoneScript.ligouMusica == true)
         {
             StartCoroutine(MusicaLigada());
         }

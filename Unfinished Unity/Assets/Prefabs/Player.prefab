@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 114682726045238922}
   - component: {fileID: 114173298349286796}
   - component: {fileID: 114142529286056944}
+  - component: {fileID: 114326515410298762}
   - component: {fileID: 82318199972589716}
   - component: {fileID: 82407791822731136}
   - component: {fileID: 108319546284481782}
@@ -756,7 +757,6 @@ MonoBehaviour:
     type: 2}
   luzCel: {fileID: 1894357850431164}
   speed: 3
-  auxSpeed: 0
   destroyPhone: 0
   red: {fileID: 21300000, guid: a0b6532f72afb36488e139d83c771997, type: 3}
   green: {fileID: 21300000, guid: 5b1eb117847768345b7c97e3c6606997, type: 3}
@@ -781,6 +781,17 @@ MonoBehaviour:
   posy: 0
   can: 0
   cellphone: {fileID: 0}
+--- !u!114 &114326515410298762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660812427141384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5729a2b2b317b4e9c14f267933f2a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114429458717011752
 MonoBehaviour:
   m_ObjectHideFlags: 1

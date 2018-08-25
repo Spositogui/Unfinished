@@ -184,7 +184,7 @@ Prefab:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1660812427141384, guid: 6e7a1d6acc1cd21489b4605110d3297c,
     type: 2}
-  m_PrefabInternal: {fileID: 82432654}
+  m_PrefabInternal: {fileID: 1925491839}
 --- !u!1 &77967338
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,118 +256,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 77967338}
   m_CullTransparentMesh: 0
---- !u!1001 &82432654
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 24.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114682726045238922, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: bateriaSprite
-      value: 
-      objectReference: {fileID: 1335234167}
-    - target: {fileID: 114682726045238922, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: celular
-      value: 
-      objectReference: {fileID: 348709942}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzRed
-      value: 
-      objectReference: {fileID: 1478830238}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzGreen
-      value: 
-      objectReference: {fileID: 304792532}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzBlue
-      value: 
-      objectReference: {fileID: 727044027}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzTVW
-      value: 
-      objectReference: {fileID: 2106011586}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzTVRed
-      value: 
-      objectReference: {fileID: 575258245}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzTVGreen
-      value: 
-      objectReference: {fileID: 2046422453}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzTVBlue
-      value: 
-      objectReference: {fileID: 1544706153}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzTVC
-      value: 
-      objectReference: {fileID: 1370604570}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzTVM
-      value: 
-      objectReference: {fileID: 1288894264}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: luzTVY
-      value: 
-      objectReference: {fileID: 1573847086}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: somLuzBanheiro
-      value: 
-      objectReference: {fileID: 323764554}
-    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: cellphone
-      value: 
-      objectReference: {fileID: 348709942}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1001 &88328667
 Prefab:
   m_ObjectHideFlags: 0
@@ -1421,7 +1309,7 @@ RectTransform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1380062946188456, guid: 6e7a1d6acc1cd21489b4605110d3297c,
     type: 2}
-  m_PrefabInternal: {fileID: 82432654}
+  m_PrefabInternal: {fileID: 1925491839}
 --- !u!1 &281412793
 GameObject:
   m_ObjectHideFlags: 0
@@ -5839,7 +5727,7 @@ BoxCollider2D:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1894357850431164, guid: 6e7a1d6acc1cd21489b4605110d3297c,
     type: 2}
-  m_PrefabInternal: {fileID: 82432654}
+  m_PrefabInternal: {fileID: 1925491839}
 --- !u!1001 &889915537
 Prefab:
   m_ObjectHideFlags: 0
@@ -12573,6 +12461,118 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &1925491839
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 24.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625822280777506, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzRed
+      value: 
+      objectReference: {fileID: 1478830238}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzGreen
+      value: 
+      objectReference: {fileID: 304792532}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzBlue
+      value: 
+      objectReference: {fileID: 727044027}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzTVW
+      value: 
+      objectReference: {fileID: 2106011586}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzTVRed
+      value: 
+      objectReference: {fileID: 575258245}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzTVGreen
+      value: 
+      objectReference: {fileID: 2046422453}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzTVBlue
+      value: 
+      objectReference: {fileID: 1544706153}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzTVC
+      value: 
+      objectReference: {fileID: 1370604570}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzTVM
+      value: 
+      objectReference: {fileID: 1288894264}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: luzTVY
+      value: 
+      objectReference: {fileID: 1573847086}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: somLuzBanheiro
+      value: 
+      objectReference: {fileID: 323764554}
+    - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: cellphone
+      value: 
+      objectReference: {fileID: 348709942}
+    - target: {fileID: 114682726045238922, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: bateriaSprite
+      value: 
+      objectReference: {fileID: 1335234167}
+    - target: {fileID: 114682726045238922, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: celular
+      value: 
+      objectReference: {fileID: 348709942}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e7a1d6acc1cd21489b4605110d3297c, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1940466723
 GameObject:
   m_ObjectHideFlags: 0
