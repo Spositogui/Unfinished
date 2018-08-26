@@ -103,6 +103,8 @@ public class Player : MonoBehaviour
 	public bool can;
 	public GameObject cellphone;
 
+    private Enemy cock;
+
     private void Awake()
     {
         estadoMental = "fine";
@@ -157,6 +159,8 @@ public class Player : MonoBehaviour
         sounds = GetComponents<AudioSource> ();
 		doorSound = sounds [0];
 		laurenWalk = sounds [1]; // som passos da Lauren
+
+        cock = GameObject.Find("Enemy").GetComponent<Enemy> ();
     }
 	
 
@@ -358,13 +362,19 @@ public class Player : MonoBehaviour
 				//desaparece
 				if (aux == 1) 
 				{
-					seEscondeu = true;
-					transform.gameObject.tag = "pEscondido";
 					canMove = false;
 					//rb.gravityScale = 0f;
 					//cap.isTrigger = true;
 					SetAnimations (7);
 					speed = 0f;
+                    if(cock.tag != "Follow"){
+                        transform.gameObject.tag = "pEscondido";
+                        seEscondeu = true;
+                    }
+                    else{
+                        transform.gameObject.tag = "Player";
+                        seEscondeu = false;
+                    }
 				}
 				//aparece
 				else

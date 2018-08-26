@@ -98,16 +98,18 @@ public class Enemy : MonoBehaviour {
 		if (!detected) {
 			sons [2].Play ();
 		}
-		if (detected) {
+		if (detected && lauren.tag == "Player") {
 			tochedwall = false;
 			wall.position = new Vector3 (-52f, 0f, 0f);
 			chaseSound.GetComponent<AudioSource> ().volume = 0.5f;
 			audioDeFundo.volume = 0f;
 			sons [2].volume = 0.2f;
+            transform.gameObject.tag = "Follow";
 		}
 		else {
 			chaseSound.GetComponent<AudioSource> ().volume = 0f;
 			audioDeFundo.volume = 0.3f;
+            transform.gameObject.tag = "Enemy";
 		}
 		if (behind) {
 			chaseSound.GetComponent<AudioSource> ().volume = 0.5f;

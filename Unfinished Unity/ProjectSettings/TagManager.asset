@@ -38,6 +38,7 @@ TagManager:
   - Tv
   - Galo
   - Fitas
+  - Follow
   layers:
   - Default
   - TransparentFX
