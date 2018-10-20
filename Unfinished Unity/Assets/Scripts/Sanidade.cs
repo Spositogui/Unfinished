@@ -50,7 +50,7 @@ public class Sanidade : MonoBehaviour
             tempoSubtracao -= Time.deltaTime;
             if (tempoSubtracao <= 0)
             {
-                if (saudeEstresse >= 0)
+                if (saudeEstresse >= 20)
                 {
                     saudeEstresse -= 20f;
                     tempoSubtracao = 2f;
