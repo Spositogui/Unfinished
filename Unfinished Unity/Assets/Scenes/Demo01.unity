@@ -12513,6 +12513,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114682726045238922, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: bateriaSprite
+      value: 
+      objectReference: {fileID: 1335234167}
+    - target: {fileID: 114682726045238922, guid: 6e7a1d6acc1cd21489b4605110d3297c,
+        type: 2}
+      propertyPath: celular
+      value: 
+      objectReference: {fileID: 348709942}
     - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
         type: 2}
       propertyPath: luzRed
@@ -12571,16 +12581,6 @@ Prefab:
     - target: {fileID: 114173298349286796, guid: 6e7a1d6acc1cd21489b4605110d3297c,
         type: 2}
       propertyPath: cellphone
-      value: 
-      objectReference: {fileID: 348709942}
-    - target: {fileID: 114682726045238922, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: bateriaSprite
-      value: 
-      objectReference: {fileID: 1335234167}
-    - target: {fileID: 114682726045238922, guid: 6e7a1d6acc1cd21489b4605110d3297c,
-        type: 2}
-      propertyPath: celular
       value: 
       objectReference: {fileID: 348709942}
     m_RemovedComponents: []
