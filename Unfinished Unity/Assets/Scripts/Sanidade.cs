@@ -26,14 +26,16 @@ public class Sanidade : MonoBehaviour
         ppProfile.colorGrading.settings = colorG;
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
-        //M PARA REALIZAR TESTES 
+        /*M PARA REALIZAR TESTES 
         if (perseguicao == false && Input.GetKeyDown(KeyCode.M))
             perseguicao = true;
         else if (perseguicao == true && Input.GetKeyDown(KeyCode.M))
             perseguicao = false;
+        */
+
         AumentaEstresse();
         DiminuiEstresse();
         ChecaEstadoEstresse();
@@ -50,9 +52,9 @@ public class Sanidade : MonoBehaviour
             tempoSubtracao -= Time.deltaTime;
             if (tempoSubtracao <= 0)
             {
-                if (saudeEstresse >= 20)
+                if (saudeEstresse >= 5)
                 {
-                    saudeEstresse -= 20f;
+                    saudeEstresse -= 5f;
                     tempoSubtracao = 2f;
                 }
             }
@@ -69,7 +71,7 @@ public class Sanidade : MonoBehaviour
             if (tempoSubtracao <= 0)
             {
                 if (saudeEstresse >= 0 && saudeEstresse < 100)
-                    saudeEstresse += 20f;
+                    saudeEstresse += 5f;
                 tempoSubtracao = 2f;
             }
         }

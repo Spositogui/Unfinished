@@ -105,12 +105,16 @@ public class Enemy : MonoBehaviour {
 			audioDeFundo.volume = 0f;
 			sons [2].volume = 0.2f;
             transform.gameObject.tag = "Follow";
-		}
+            if (Sanidade.perseguicao == false)
+                Sanidade.perseguicao = true;
+        }
 		else {
 			chaseSound.GetComponent<AudioSource> ().volume = 0f;
 			audioDeFundo.volume = 0.3f;
             transform.gameObject.tag = "Enemy";
-		}
+            if (Sanidade.perseguicao == true)
+                Sanidade.perseguicao = false;
+        }
 		if (behind) {
 			chaseSound.GetComponent<AudioSource> ().volume = 0.5f;
 			audioDeFundo.volume = 0f;
