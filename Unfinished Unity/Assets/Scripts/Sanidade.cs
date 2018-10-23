@@ -18,9 +18,10 @@ public class Sanidade : MonoBehaviour
 
     public PostProcessingProfile ppProfile;
 
-    void Awake()
+    void Start()
     {
         var colorG = ppProfile.colorGrading.settings;
+        saudeEstresse = 100f;
         colorG = ppProfile.colorGrading.settings;
         colorG.basic.saturation = 1f;
         ppProfile.colorGrading.settings = colorG;
@@ -52,9 +53,9 @@ public class Sanidade : MonoBehaviour
             tempoSubtracao -= Time.deltaTime;
             if (tempoSubtracao <= 0)
             {
-                if (saudeEstresse >= 5)
+                if (saudeEstresse >= 10)
                 {
-                    saudeEstresse -= 5f;
+                    saudeEstresse -= 10f;
                     tempoSubtracao = 2f;
                 }
             }
