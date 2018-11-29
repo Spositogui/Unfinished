@@ -30,6 +30,7 @@ public class CellphoneScript : MonoBehaviour {
 	void Awake()
 	{
 		i = 1;
+        notasMusicais.SetActive(false);
     }
 
 	void Start () 
@@ -45,20 +46,17 @@ public class CellphoneScript : MonoBehaviour {
     void OnEnable()
     {
         aux = false;
+        i = 1;
     }
 
     void OnDisable()
     {
         aux = false;
+        notasMusicais.SetActive(false);
     }
 
 	void Update () 
 	{
-        //		if (mapCan.activeSelf == true && Input.GetKeyDown (KeyCode.Escape)) {
-        //			mainCan.gameObject.SetActive(true);
-        //			mapCan.gameObject.SetActive(false);
-        //		}
-
         right = Input.GetKeyDown (KeyCode.RightArrow);
 		left = Input.GetKeyDown (KeyCode.LeftArrow);
 		up = Input.GetKeyDown(KeyCode.UpArrow);

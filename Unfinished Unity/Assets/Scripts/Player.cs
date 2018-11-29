@@ -53,21 +53,6 @@ public class Player : MonoBehaviour
 	private AudioSource doorSound;
 	private AudioSource laurenWalk;
 
-    /*[SerializeField]
-    private GameObject caixaDialogo;
-    private bool tomNPC = false;
-    private bool fliperamaRed = false;
-    private bool fliperamaGreen = false;
-    private bool fliperamaBlue = false;
-    private bool posCartuchoRed;
-    private bool posCartuchoGreen;
-    private bool posCartuchoBlue;
-    private bool pegouCatRed;
-    private bool pegouCatGreen;
-    private bool pegouCatBlue;*/
-
-
-
     private bool estadoDaLuz;
 	private bool block = false;
 	private bool facingRight = true ;
@@ -79,8 +64,6 @@ public class Player : MonoBehaviour
 	public float posx;
 	public float posy;
     private bool apresentacaoTom = true;
-
-
 
 	//variaveis de transição de cena
 	private bool cena1 = false;
@@ -127,22 +110,7 @@ public class Player : MonoBehaviour
 		canMove = true;
 		cap = GetComponent<CapsuleCollider2D> ();
         GameObject.FindGameObjectWithTag("Filtro").GetComponent<SpriteRenderer>().enabled = true;
-        //Referente ao Puzzle ------------------
-        /*tv = GameObject.FindGameObjectWithTag("Tv").GetComponent<SpriteRenderer>();
-        cartuchoRed = GameObject.FindGameObjectWithTag("CartuchoRed");
-        cartuchoRed.SetActive(true);
-        cartuchoGreen = GameObject.FindGameObjectWithTag("CartuchoGreen");
-        cartuchoGreen.SetActive(true);
-        cartuchoBlue = GameObject.FindGameObjectWithTag("CartuchoBlue");
-        cartuchoBlue.SetActive(true);
-        caixaDialogo.SetActive(false);
-        posCartuchoRed = false;
-        posCartuchoGreen = false;
-        posCartuchoBlue = false;
-        pegouCatRed = false;
-        pegouCatGreen = false;
-        pegouCatBlue = false;*/
-        
+                
         //LUZES
         luzRed.SetActive(false);
         luzGreen.SetActive(false);
@@ -170,9 +138,7 @@ public class Player : MonoBehaviour
 		posy = this.transform.position.y;
 		estadoDaLuz = luzCel.GetComponent<LuzCelular> ().luzCelularEstado;
         //PuzzleRGB();
-
-		//SHORTCUTS MANEIROS
-
+        
 		//DESABILITA O FILTRO MACABRO
 		if (Input.GetKeyDown ("u") && GameObject.FindGameObjectWithTag ("Filtro").GetComponent<SpriteRenderer> ().enabled == true)
 			GameObject.FindGameObjectWithTag ("Filtro").GetComponent<SpriteRenderer> ().enabled = false;
@@ -217,11 +183,7 @@ public class Player : MonoBehaviour
 		cena6 = Physics2D.Linecast (transform.position, Check.position, 1 << LayerMask.NameToLayer ("Sc6"));
 		//verifica se a linha do personagem colidiu com a layer da cena 7 = jardim
 		cena7 = Physics2D.Linecast (transform.position, Check.position, 1 << LayerMask.NameToLayer ("Sc7"));
-
-        //Verifica se a Lauren entrou em colisao com o Tom NPC, que esta na sala de jogos
-        //tomNPC = Physics2D.Linecast(transform.position, Check.position, 1 << LayerMask.NameToLayer("TomNPC"));
-
-
+        
         //se colidir com a parede, a velocidade dela fica 0 e mostra animação dela parada
         if (block) {
 			speed = 0f;
@@ -314,25 +276,6 @@ public class Player : MonoBehaviour
 			doorSound.Play ();
 		}
 
-        /*Faz com que a Lauren possa interagir com o NPC, e quando interage o Canvas é ativo e sua velocidade setada pra 0, velocidade so volta ao apertar E para sair do dialogo
-        if (tomNPC && Globais.AUXBOOL == false && Input.GetKeyDown("e"))
-        {
-            this.canMove = false;
-            caixaDialogo.SetActive(true);
-            Globais.AUXBOOL = true;
-            SetAnimations (0);
-   
-        }
-        else if (Globais.AUXBOOL == true && Input.GetKeyDown("e"))
-        {
-            Globais.AUXBOOL = false;
-            caixaDialogo.SetActive(false);
-            this.canMove = true;
-        }
-        */
-
-
-
         //Instancia o Celular
         pegarCelular = Input.GetKeyDown(KeyCode.Tab);
 
@@ -363,8 +306,6 @@ public class Player : MonoBehaviour
 				if (aux == 1) 
 				{
 					canMove = false;
-					//rb.gravityScale = 0f;
-					//cap.isTrigger = true;
 					SetAnimations (7);
 					speed = 0f;
                     if(cock.tag != "Follow"){
@@ -383,8 +324,6 @@ public class Player : MonoBehaviour
 					seEscondeu = false;
 					transform.gameObject.tag = "Player";
 					canMove = true;
-					//rb.gravityScale = 10f;
-					//cap.isTrigger = false;
 					SetAnimations (8);
 					speed = auxSpeed;
 				}
@@ -435,151 +374,6 @@ public class Player : MonoBehaviour
 		}
 	}
 
-    /*
-    void PuzzleRGB()
-    {
-
-        //Esses 3 IF's verificam se ela já pegou as fitas dos arcades, se sim, ela consegue interagir, senão ela nao consegue
-        if (posCartuchoRed && Input.GetKeyDown("e"))
-        {
-            cartuchoRed.SetActive(false);
-            pegouCatRed = true;
-        }
-        if  (posCartuchoGreen && Input.GetKeyDown("e"))
-        {
-            cartuchoGreen.SetActive(false);
-            pegouCatGreen = true;
-        }
-        if (posCartuchoBlue && Input.GetKeyDown("e"))
-        {
-            cartuchoBlue.SetActive(false);
-            pegouCatBlue = true;
-        }
-
-        //Verifica se a Lauren colidiu com o primeiro fliperama e se apertou E e troca os sprites
-        
-        //puzzle.sprite = red;
-        if (fliperamaRed && pegouCatRed && Input.GetKeyDown ("e") && GameObject.FindGameObjectWithTag ("FlipR").GetComponent<SpriteRenderer> ().enabled == false) {
-            luzRed.SetActive(true);
-            GameObject.FindGameObjectWithTag ("FlipR").GetComponent<SpriteRenderer> ().enabled = true;
-        } else if (fliperamaRed && pegouCatRed && Input.GetKeyDown ("e") && GameObject.FindGameObjectWithTag ("FlipR").GetComponent<SpriteRenderer> ().enabled == true) {
-            luzRed.SetActive(false);
-            GameObject.FindGameObjectWithTag ("FlipR").GetComponent<SpriteRenderer> ().enabled = false;
-        }
-        //puzzle.sprite = green
-        else if (fliperamaGreen && pegouCatGreen && Input.GetKeyDown ("e") && GameObject.FindGameObjectWithTag ("FlipG").GetComponent<SpriteRenderer> ().enabled == false) {
-            luzGreen.SetActive(true);
-            GameObject.FindGameObjectWithTag ("FlipG").GetComponent<SpriteRenderer> ().enabled = true;
-		} else if (fliperamaGreen && pegouCatGreen && Input.GetKeyDown ("e") && GameObject.FindGameObjectWithTag ("FlipG").GetComponent<SpriteRenderer> ().enabled == true) {
-            luzGreen.SetActive(false);
-            GameObject.FindGameObjectWithTag ("FlipG").GetComponent<SpriteRenderer> ().enabled = false;
-		}
-        //puzzle.sprite = blue;
-        else if (fliperamaBlue && pegouCatBlue && Input.GetKeyDown ("e") && GameObject.FindGameObjectWithTag ("FlipB").GetComponent<SpriteRenderer> ().enabled == false) {
-            luzBlue.SetActive(true);
-            GameObject.FindGameObjectWithTag ("FlipB").GetComponent<SpriteRenderer> ().enabled = true;
-		} else if (fliperamaBlue && pegouCatBlue && Input.GetKeyDown ("e") && GameObject.FindGameObjectWithTag ("FlipB").GetComponent<SpriteRenderer> ().enabled == true) {
-            luzBlue.SetActive(false);
-            GameObject.FindGameObjectWithTag ("FlipB").GetComponent<SpriteRenderer> ().enabled = false;
-		}
-
-        if (GameObject.FindGameObjectWithTag("FlipR").GetComponent<SpriteRenderer>().enabled == false && GameObject.FindGameObjectWithTag("FlipG").GetComponent<SpriteRenderer>().enabled == false && GameObject.FindGameObjectWithTag("FlipB").GetComponent<SpriteRenderer>().enabled == false)
-        { 
-			tv.sprite = black;
-            luzTVW.SetActive(false);
-            luzTVRed.SetActive(false);
-            luzTVGreen.SetActive(false);
-            luzTVBlue.SetActive(false);
-            luzTVC.SetActive(false);
-            luzTVM.SetActive(false);
-            luzTVY.SetActive(false);
-        }
-        if (GameObject.FindGameObjectWithTag("FlipR").GetComponent<SpriteRenderer>().enabled == true && GameObject.FindGameObjectWithTag("FlipG").GetComponent<SpriteRenderer>().enabled == true && GameObject.FindGameObjectWithTag("FlipB").GetComponent<SpriteRenderer>().enabled == true)
-        { 
-            tv.sprite = white;
-            luzTVW.SetActive(true);
-            luzTVRed.SetActive(false);
-            luzTVGreen.SetActive(false);
-            luzTVBlue.SetActive(false);
-            luzTVC.SetActive(false);
-            luzTVM.SetActive(false);
-            luzTVY.SetActive(false);
-        }
-        if (GameObject.FindGameObjectWithTag("FlipR").GetComponent<SpriteRenderer>().enabled == true && GameObject.FindGameObjectWithTag("FlipG").GetComponent<SpriteRenderer>().enabled == false && GameObject.FindGameObjectWithTag("FlipB").GetComponent<SpriteRenderer>().enabled == false)
-        { 
-            tv.sprite = red;
-            luzTVRed.SetActive(true);
-            luzTVW.SetActive(false);
-            luzTVGreen.SetActive(false);
-            luzTVBlue.SetActive(false);
-            luzTVC.SetActive(false);
-            luzTVM.SetActive(false);
-            luzTVY.SetActive(false);
-
-        }
-        if (GameObject.FindGameObjectWithTag("FlipR").GetComponent<SpriteRenderer>().enabled == true && GameObject.FindGameObjectWithTag("FlipG").GetComponent<SpriteRenderer>().enabled == true && GameObject.FindGameObjectWithTag("FlipB").GetComponent<SpriteRenderer>().enabled == false)
-        { 
-            tv.sprite = yellow;
-            luzTVY.SetActive(true);
-            luzTVRed.SetActive(false);
-            luzTVW.SetActive(false);
-            luzTVGreen.SetActive(false);
-            luzTVBlue.SetActive(false);
-            luzTVC.SetActive(false);
-            luzTVM.SetActive(false);
-        }
-        if (GameObject.FindGameObjectWithTag("FlipR").GetComponent<SpriteRenderer>().enabled == true && GameObject.FindGameObjectWithTag("FlipG").GetComponent<SpriteRenderer>().enabled == false && GameObject.FindGameObjectWithTag("FlipB").GetComponent<SpriteRenderer>().enabled == true)
-        { 
-            tv.sprite = magenta;
-            luzTVM.SetActive(true);
-            luzTVY.SetActive(false);
-            luzTVRed.SetActive(false);
-            luzTVW.SetActive(false);
-            luzTVGreen.SetActive(false);
-            luzTVBlue.SetActive(false);
-            luzTVC.SetActive(false);
-            
-        }
-        if (GameObject.FindGameObjectWithTag("FlipR").GetComponent<SpriteRenderer>().enabled == false && GameObject.FindGameObjectWithTag("FlipG").GetComponent<SpriteRenderer>().enabled == true && GameObject.FindGameObjectWithTag("FlipB").GetComponent<SpriteRenderer>().enabled == false)
-        { 
-            tv.sprite = green;
-            luzTVGreen.SetActive(true);
-            luzTVM.SetActive(false);
-            luzTVY.SetActive(false);
-            luzTVRed.SetActive(false);
-            luzTVW.SetActive(false);
-            luzTVBlue.SetActive(false);
-            luzTVC.SetActive(false);
-        }
-        if (GameObject.FindGameObjectWithTag("FlipR").GetComponent<SpriteRenderer>().enabled == false && GameObject.FindGameObjectWithTag("FlipG").GetComponent<SpriteRenderer>().enabled == true && GameObject.FindGameObjectWithTag("FlipB").GetComponent<SpriteRenderer>().enabled == true)
-        { 
-            tv.sprite = cian;
-            luzTVC.SetActive(true);
-            luzTVGreen.SetActive(false);
-            luzTVM.SetActive(false);
-            luzTVY.SetActive(false);
-            luzTVRed.SetActive(false);
-            luzTVW.SetActive(false);
-            luzTVBlue.SetActive(false);
-            
-        }
-        if (GameObject.FindGameObjectWithTag("FlipR").GetComponent<SpriteRenderer>().enabled == false && GameObject.FindGameObjectWithTag("FlipG").GetComponent<SpriteRenderer>().enabled == false && GameObject.FindGameObjectWithTag("FlipB").GetComponent<SpriteRenderer>().enabled == true)
-        { 
-            tv.sprite = blue;
-            luzTVBlue.SetActive(true);
-            luzTVC.SetActive(false);
-            luzTVGreen.SetActive(false);
-            luzTVM.SetActive(false);
-            luzTVY.SetActive(false);
-            luzTVRed.SetActive(false);
-            luzTVW.SetActive(false);
-            
-        }
-
-
-
-    }*/
-
 	void Flip()
 	{
 		//troca o valor do facingRight, se for V vira F e se for F vira V
@@ -615,54 +409,17 @@ public class Player : MonoBehaviour
 		else 
 		{
 			cellphone.SetActive (true);
-			//Vector3 pos = new Vector3 (phoneInstatiate.position.x, phoneInstatiate.position.y, transform.position.z);
-			//clonePhone = (GameObject)Instantiate (phonePrefab, transform.position, transform.rotation);
 			canMove = false;
 			destroyPhone= false;
 			clonePhone = false;
 			SetAnimations (4);
 		}
-	}
-		
+	}		
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag ("Esconder"))
-			canHide = true;
-
-        /* Todos os 3 IFS abaixo são de comparacao com os fliperamas, isso faz com que ela consiga desabilitar e habilitar oq ela quiser
-            if (other.CompareTag("FlipRed"))
-            {
-                fliperamaRed = true;
-                fliperamaGreen = false;
-                fliperamaBlue = false;
-            }
-            if (other.CompareTag("FlipGreen"))
-            {
-                fliperamaGreen = true;
-                fliperamaRed = false;
-                fliperamaRed = false;
-            }
-            if (other.CompareTag("FlipBlue"))
-            {
-                fliperamaBlue = true;
-                fliperamaRed = false;
-                fliperamaGreen = false;
-            }
-        // Compara de ela esta por cima dos cartuchos
-        if (other.CompareTag("CartuchoRed"))
-        {
-            posCartuchoRed = true;
-        }
-        if (other.CompareTag("CartuchoGreen"))
-        {
-            posCartuchoGreen = true;
-        }
-        if (other.CompareTag("CartuchoBlue"))
-        {
-            posCartuchoBlue = true;
-        }*/
-
+			canHide = true;        
     }
 
 	void OnTriggerExit2D(Collider2D other)
@@ -672,34 +429,6 @@ public class Player : MonoBehaviour
 			canHide = false;
 			SetAnimations (8);
 		}
-        // 
-
-        /*
-        if (other.CompareTag("FlipRed"))
-        {
-            fliperamaRed = false;
-        }
-        if (other.CompareTag("FlipGreen"))
-        {
-            fliperamaGreen = false;
-        }
-        if (other.CompareTag("FlipBlue"))
-        {
-            fliperamaBlue = false;
-        }
-        // Compara de ela saiu dos cartuchos
-        if (other.CompareTag("CartuchoRed"))
-        {
-            posCartuchoRed = false;
-        }
-        if (other.CompareTag("CartuchoGreen"))
-        {
-            posCartuchoGreen = false;
-        }
-        if (other.CompareTag("CartuchoBlue"))
-        {
-            posCartuchoBlue = false;
-        }*/
     }
 
 	public void SoundWalk()
